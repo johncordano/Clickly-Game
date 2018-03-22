@@ -1,15 +1,14 @@
 import React from "react";
-import "./characterCard.css";
+import "./CharacterCard.css";
 
-const characterCard = props => (
+const CharacterCard = props => (
   <div className="card">
     <div className="img-container">
       <img alt={props.name} src={props.image} />
     </div>
-    <span onClick={() => props.removeFriend(props.id)} className="remove">
-      𝘅
+    <span onClick={() => props.setClicked(props.id)} className="card">
     </span>
   </div>
 );
 
-export default characterCard;
+export default CharacterCard;
