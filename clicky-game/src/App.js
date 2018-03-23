@@ -12,7 +12,7 @@ let score = 0;
 let topScore = 0;
 let clickMessage = "Click an image to score a point, but if you click an image more than once, you lose all your points."
 
-// Set the state to the character data in the json file, the score, the top score, and the click message.
+// Set the state for the character data in the json file, the score, the top score, and the click message.
 class App extends Component {
     state = {
         characters,
@@ -21,13 +21,13 @@ class App extends Component {
         clickMessage
     };
 
-    // When a character card is clicked use the processClicked property created in the CharacterCard.js file
+    // When a character card is clicked, use the processClicked property created in the CharacterCard.js file
     processClicked = id => {
         // Create a constant for all characters and for a clicked character.
         const characters = this.state.characters;
         const clickedCharacter = characters.filter(character => character.id === id);
 
-        // If the isClicked value for the clicked character is true, decrease the score to 0, and display the appropriate round over message.
+        // If the isClicked value for the clicked character is true, decrease the score to 0, and display the appropriate round over message. All characters start with an isClicked value of false.
         if (clickedCharacter[0].isClicked === true) {
             score = 0;
             clickMessage = "The round is over because you already clicked that character. You can start over if you want to."
@@ -80,7 +80,7 @@ class App extends Component {
         }
     };
 
-    // Render the section containing the title, messages, score, and top score, and the section containing the characters.
+    // Render the page section containing the title, messages, score, and top score, and the page section containing the characters.
     render() {
         return (
             <Wrapper>
