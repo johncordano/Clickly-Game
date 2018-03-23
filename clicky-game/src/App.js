@@ -64,11 +64,9 @@ class App extends Component {
             clickedCharacter[0].isClicked = true;
             score = 0;
             clickMessage = "You've clicked all of the characters.";
-            // If the score is more than the top score, change the top score to the score, and set the state for the top score.
-            if (score > topScore) {
-                topScore = score;
-                this.setState({topScore});
-            }
+            // Set the top score to 12, and set the state for the top score.
+            topScore = 12;
+            this.setState({topScore});
             // Set the isClicked value for all characters to false.
             for (let i = 0; i < characters.length; i++){
                 characters[i].isClicked = false;
