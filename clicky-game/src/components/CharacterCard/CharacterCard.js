@@ -1,11 +1,11 @@
 import React from "react";
 import "./CharacterCard.css";
 
-// Use the setClicked property for the onClick function.
+// Use the processClicked property for the onClick function.
 const CharacterCard = props => (
   <div onClick={() => props.processClicked(props.id)} className="card">
     <div className="img-container">
-      <img alt={props.name} src={props.image} />
+      <img alt={props.id} src={props.image} />
     </div>
   </div>
 );
